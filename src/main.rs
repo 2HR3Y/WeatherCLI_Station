@@ -1,6 +1,7 @@
 use std::io;
 use serde::Deserialize;
 use colored::*;
+use reqwest;
 
 // Struct to deserialize the JSON response from OpenWeather API
 #[derive(Deserialize, Debug)]
@@ -74,6 +75,7 @@ fn display_weather_info(response: &WeatherResponse) {
         "shower rain" | "rain" | "thunderstorm" | "snow" => weather_text.bright_cyan(),
         _ => weather_text.normal(),
     };
+
     // Print the colored weather information
     println!("{}", weather_text_colored);
 }
@@ -125,7 +127,7 @@ fn main() {
         let mut input = String::new();
         io::stdin().read_line(&mut input).expect("Failed to read input!"); // Reading user input for continuation
         let input = input.trim().to_lowercase();
-        
+
         if input != "yes" {
             println!("{}", "Thank you for using Weather Station!");
             break; // Exiting the loop if user doesn't want to continue
