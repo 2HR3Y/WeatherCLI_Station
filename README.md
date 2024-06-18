@@ -72,7 +72,7 @@ Thank you for using Weather Station!
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/2HR3Y/WeatherCLI_Station/blob/main/LICENSE.md) file for details.
 
 ## Acknowledgments
 
